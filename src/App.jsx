@@ -49,7 +49,7 @@ export default function App() {
     // Die nächsten 4 Zeilen könnte man auch in eine eigene Funktion
     // auslagern, da sie in allen handler functions gleich sind
     setMovies(newMovies);
-    history = [...history.slice(0, historyPointer + 1)];
+    history = [...history.slice(0, historyPointer + 1)]; // schneidet den Überhang ab, falls man nach dem Zurückgehen eine NEUE historie schreibt
     history.push(newMovies);
     historyPointer++;
   }
